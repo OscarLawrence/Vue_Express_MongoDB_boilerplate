@@ -5,7 +5,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import cors from "cors";
 
-import Keys from "../../config/server/secrets/keys";
+import Keys from "../../config/secrets/keys";
 
 const app = express();
 
