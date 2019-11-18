@@ -1,5 +1,5 @@
 #secrets
-/config/server/sercrets/
+config/server/sercrets/
 
 # node modules
 node_modules/
@@ -13,7 +13,7 @@ node_modules/
 
 # Client
 
-/src/client/.DS_Store
+src/client/.DS_Store
 
 # local env files
 *.env.local
