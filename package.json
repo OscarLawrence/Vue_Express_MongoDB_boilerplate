@@ -1,0 +1,31 @@
+{
+  "name": "vue_express_boilerplate",
+  "version": "0.0.1",
+  "description": "simple boilerplate for a Vuejs application with an express backend",
+  "main": "index.js",
+  "scripts": {
+    "build:server": "NODE_ENV=production webpack --config config/server/webpack.config.js",
+    "dev:server": "webpack --config config/server/webpack.config.js",
+    "dev:client": "npm run serve --prefix src/client",
+    "build:client": "npm run build --prefix src/client",
+    "dev": "npm run dev:client & npm run dev:server",
+    "build": "npm run build:server && npm run build:client",
+    "git": "git add . && git commit -m 'changes' && git push origin master"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "express",
+    "nodejs"
+  ],
+  "author": "Vindao (Vincent Schmitt)",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon-webpack-plugin": "^4.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-cli": "^3.3.10"
+  }
+}
