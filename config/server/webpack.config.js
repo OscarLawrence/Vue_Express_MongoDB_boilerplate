@@ -1,6 +1,7 @@
 const Paths = require("./Paths");
 const NodemonPlugin = require("nodemon-webpack-plugin");
 const WebpackCleanupPlugin = require("webpack-cleanup-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -30,6 +31,11 @@ module.exports = {
   watch: !isProduction,
   target: "node",
   plugins: isProduction
-    ? [new WebpackCleanupPlugin()]
+    ? [
+        new WebpackCleanupPlugin({
+          exclude: ["client/**/*"]
+        }),
+        new CompressionPlugin()
+      ]
     : [new WebpackCleanupPlugin(), new NodemonPlugin()]
 };
