@@ -1,5 +1,5 @@
 #secrets
-/config/server/secrets/keys.ts
+/config/secrets/keys.ts
 
 # node modules
 node_modules/
